@@ -3,10 +3,23 @@
 
 :root {
     // Base colors
+    --primary: #282c34;
     --light: #fff;
     --dark: #000;
 
+    // Status
+    --error-friendly: rgb(201, 101, 38);
+
     // App colors
-    --main-bg-color: #282c34;
+    --main-bg-color: var(--primary);
     --home-link-color: #61dafb;
+
+    // Components
+    
+    // Inputs
+    --input-border-color: #18294d;
+    --input-color: #1c4087;
+
+    // Buttons
+    --button-bg-color: var(--primary);
 }
