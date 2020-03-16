@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setWheeze } from '../../actions/actions';
 
 import styles from './questionTwo.module.scss';
+
+const mapDispatchToProps = {
+    setWheeze,
+};
 
 class QuestionTwo extends Component {
     state = {
@@ -17,6 +23,7 @@ class QuestionTwo extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
 
+        this.props.setWheeze(true);
         this.props.history.push('/results');
     };
 
@@ -64,4 +71,4 @@ class QuestionTwo extends Component {
     }
 }
 
-export default withRouter(QuestionTwo);
+export default connect(null, mapDispatchToProps)(withRouter(QuestionTwo));
