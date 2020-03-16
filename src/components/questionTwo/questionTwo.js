@@ -24,10 +24,14 @@ class QuestionTwo extends Component {
                     </p>
                     <div className={styles.radioContainer}>
                         <input hidden type="radio" id="yep" name="yes" />
-                        <label htmlFor="yep">Yes</label>
+                        <label htmlFor="yep" class={styles.label}>
+                            Yes
+                        </label>
 
                         <input hidden type="radio" id="nope" name="no" />
-                        <label htmlFor="nope">No</label>
+                        <label htmlFor="nope" class={styles.label}>
+                            No
+                        </label>
                     </div>
                     {this.state.isValid && (
                         <button className={styles.button} type="submit">

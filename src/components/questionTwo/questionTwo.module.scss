@@ -4,8 +4,8 @@
 
 // Variables
 // -------------------------------------
-$radio-container-width: 240px;
 $radio-label-font-size: 28px;
+$label-width: 128px;
 
 // Block
 // -------------------------------------
@@ -27,9 +27,16 @@ $radio-label-font-size: 28px;
     display: flex;
     font-size: $radio-label-font-size;
     font-weight: 700;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: var(--space-xl);
-    width: $radio-container-width;
+    width: 100%;
+}
+
+.label {
+    border: 2px solid var(--primary);
+    padding: var(--space) 0;
+    text-align: center;;
+    width: $label-width;
 }
 
 .button {
