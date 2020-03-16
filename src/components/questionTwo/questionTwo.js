@@ -12,18 +12,20 @@ const mapDispatchToProps = {
 class QuestionTwo extends Component {
     state = {
         isValid: false,
+        optionSelected: null,
     };
 
-    handleChange = () => {
+    handleChange = (e) => {
         this.setState({
             isValid: true,
+            optionSelected: e.target.id,
         });
     };
 
     handleSubmit = (e) => {
         e.preventDefault();
 
-        this.props.setWheeze(true);
+        this.props.setWheeze(this.state.optionSelected === 'yes');
         this.props.history.push('/results');
     };
 
@@ -40,11 +42,11 @@ class QuestionTwo extends Component {
                             onChange={this.handleChange}
                             hidden
                             type="radio"
-                            id="yep"
+                            id="yes"
                             name="second-question"
                             className={styles.input}
                         />
-                        <label htmlFor="yep" className={styles.label}>
+                        <label htmlFor="yes" className={styles.label}>
                             Yes
                         </label>
 
@@ -52,11 +54,11 @@ class QuestionTwo extends Component {
                             onChange={this.handleChange}
                             hidden
                             type="radio"
-                            id="nope"
+                            id="no"
                             name="second-question"
                             className={styles.input}
                         />
-                        <label htmlFor="nope" className={styles.label}>
+                        <label htmlFor="no" className={styles.label}>
                             No
                         </label>
                     </div>

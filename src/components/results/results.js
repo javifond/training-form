@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import styles from './results.module.scss';
-import { hasFever } from '../questionOne/questionOne.utils';
 
 const mapStateToProps = (state) => ({
     ...state,
