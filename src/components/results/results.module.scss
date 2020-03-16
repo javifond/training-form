@@ -1,0 +1,15 @@
+// TODO[JB]: Find out how to add this
+// common styles to the loader.
+@import '../../styles/index.scss';
+
+// Block
+// -------------------------------------
+.root {
+    composes: root from '../questionOne/questionOne.module.scss';
+}
+
+// Elements
+// -------------------------------------
+.button {
+    composes: button from '../questionOne/questionOne.module.scss';
+}
