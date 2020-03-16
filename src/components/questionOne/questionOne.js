@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setFever } from '../../actions/fever.actions';
+import { setFever } from '../../actions/actions';
 import { MIN_TEMPERATURE, MAX_TEMPERATURE } from './questionOne.constants';
 import { inRange, hasFever } from './questionOne.utils';
 
 import styles from './questionOne.module.scss';
 
-const mapDispatchToProps = (dispatch) => ({
-    setFever: (hasFever) => dispatch(setFever(hasFever)),
-});
-
-const mapStateToProps = (state) => ({
-    ...state,
-});
+const mapDispatchToProps = {
+    setFever,
+};
 
 class QuestionOne extends Component {
     state = {
@@ -80,7 +76,4 @@ class QuestionOne extends Component {
     }
 }
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(withRouter(QuestionOne));
+export default connect(null, mapDispatchToProps)(withRouter(QuestionOne));

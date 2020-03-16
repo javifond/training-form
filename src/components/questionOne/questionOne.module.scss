@@ -43,6 +43,7 @@ $error-font-size: 20px;
     font-size: $input-font-size;
     font-weight: 700;
     margin-bottom: var(--space);
+    padding: var(--gutter);
     text-align: center;
     outline: none;
     width: 4 * $input-font-size;
