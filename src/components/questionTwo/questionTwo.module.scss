@@ -6,6 +6,7 @@
 // -------------------------------------
 $radio-label-font-size: 28px;
 $label-width: 128px;
+$duration: .3s;
 
 // Block
 // -------------------------------------
@@ -37,6 +38,14 @@ $label-width: 128px;
     padding: var(--space) 0;
     text-align: center;;
     width: $label-width;
+    transition: border-color $duration ease;
+    will-change: border-color;
+}
+
+.input:checked + .label {
+    background-color: var(--primary);
+    border-color: var(--light);
+    color: var(--light);
 }
 
 .button {

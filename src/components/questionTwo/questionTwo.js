@@ -8,6 +8,12 @@ class QuestionTwo extends Component {
         isValid: false,
     };
 
+    handleChange = () => {
+        this.setState({
+            isValid: true,
+        });
+    };
+
     handleSubmit = (e) => {
         e.preventDefault();
 
@@ -23,13 +29,27 @@ class QuestionTwo extends Component {
                         cough?
                     </p>
                     <div className={styles.radioContainer}>
-                        <input hidden type="radio" id="yep" name="yes" />
-                        <label htmlFor="yep" class={styles.label}>
+                        <input
+                            onChange={this.handleChange}
+                            hidden
+                            type="radio"
+                            id="yep"
+                            name="second-question"
+                            className={styles.input}
+                        />
+                        <label htmlFor="yep" className={styles.label}>
                             Yes
                         </label>
 
-                        <input hidden type="radio" id="nope" name="no" />
-                        <label htmlFor="nope" class={styles.label}>
+                        <input
+                            onChange={this.handleChange}
+                            hidden
+                            type="radio"
+                            id="nope"
+                            name="second-question"
+                            className={styles.input}
+                        />
+                        <label htmlFor="nope" className={styles.label}>
                             No
                         </label>
                     </div>
