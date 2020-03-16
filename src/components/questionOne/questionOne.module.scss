@@ -2,6 +2,65 @@
 // common styles to the loader.
 @import '../../styles/index.scss';
 
+// Variables
+// -------------------------------------
+$title-font-size: 24px;
+$input-font-size: 28px;
+$button-width: 240px;
+$button-height: 56px;
+$error-font-size: 20px;
+
+// Block
+// -------------------------------------
 .root {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     margin: var(--double-gutter);
+    min-height: 100vh;
+
+    // Elements
+    // -------------------------------------
+    .container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: $title-font-size;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: var(--space-xl);
+    }
+
+    .input {
+        border: 0;
+        border-bottom: 4px solid var(--input-border-color);
+        color: var(--input-color);
+        font-size: $input-font-size;
+        font-weight: 700;
+        margin-bottom: var(--space);
+        text-align: center;
+        outline: none;
+        width: 4 * $input-font-size;
+    }
+
+    .error {
+        color: var(--error-friendly);
+        font-size: $error-font-size;
+        font-weight: 700;
+    }
+
+    .button {
+        background-color: var(--button-bg-color);
+        color: var(--light);
+        cursor: pointer;
+        font-size: $input-font-size;
+        font-weight: 700;
+        height: $button-height;
+        outline: none;
+        text-transform: uppercase;
+        width: $button-width;
+    }
 }
