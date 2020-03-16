@@ -26,6 +26,7 @@ $error-font-size: 20px;
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .title {
@@ -48,12 +49,15 @@ $error-font-size: 20px;
 }
 
 .error {
+    animation: fadeIn $global-animation-duration ease;
     color: var(--error-friendly);
     font-size: $error-font-size;
     font-weight: 700;
+    margin: 0;
 }
 
 .button {
+    animation: zoomIn $global-animation-duration ease;
     background-color: var(--button-bg-color);
     color: var(--light);
     cursor: pointer;
