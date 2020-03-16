@@ -38,8 +38,8 @@ $duration: .3s;
     padding: var(--space) 0;
     text-align: center;;
     width: $label-width;
-    transition: border-color $duration ease;
-    will-change: border-color;
+    transition: all $duration ease;
+    will-change: all;
 }
 
 .input:checked + .label {

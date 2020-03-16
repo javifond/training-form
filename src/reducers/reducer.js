@@ -1,6 +1,6 @@
 const initialState = {
     hasFever: false,
-}
+};
 
 export default (state = initialState, action) => {
     const { type, payload } = action;
@@ -11,7 +11,12 @@ export default (state = initialState, action) => {
                 ...state,
                 hasFever: payload,
             };
+        case 'SET_WHEEZE':
+            return {
+                ...state,
+                hasWheeze: payload,
+            };
         default:
             return state;
     }
-}
+};
