@@ -17,7 +17,7 @@ class QuestionTwo extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
 
-        this.props.history.push('/');
+        this.props.history.push('/results');
     };
 
     render() {
@@ -55,7 +55,7 @@ class QuestionTwo extends Component {
                     </div>
                     {this.state.isValid && (
                         <button className={styles.button} type="submit">
-                            Continue
+                            Result
                         </button>
                     )}
                 </form>
