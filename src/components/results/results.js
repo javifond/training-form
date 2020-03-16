@@ -13,8 +13,18 @@ class Results extends Component {
     render() {
         return (
             <section className={styles.root}>
-                <article>
-                    <p>you have corona virus!!</p>
+                <article className={styles.container}>
+                    <p>Ouh! Your symptoms indecate that you <strong>might have </strong>Corona Virus.</p>
+                    <p>Please stay at home.</p>
+                    <p>And call the authorities.</p>
+                    <p>Do it for your safety and for those around you.</p>
+                </article>
+
+                <article className={styles.container}>
+                    <p>Uff! You <strong>might not have</strong> Corona Virus.</p>
+                    <p>But as a general recommendation, please stay at home.</p>
+                    <p>Let's be resposible and show solidarity to our comunity.</p>
+                    <p>Thanks a lot.</p>
                 </article>
                 
                 <button

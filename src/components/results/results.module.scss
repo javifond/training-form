@@ -6,10 +6,19 @@
 // -------------------------------------
 .root {
     composes: root from '../questionOne/questionOne.module.scss';
+    flex-direction: column;
 }
 
 // Elements
 // -------------------------------------
+.container {
+    margin-bottom: var(--space-xl);
+
+    p {
+        margin-bottom: var(--gutter);
+        margin-top: 0;
+    }
+}
 .button {
     composes: button from '../questionOne/questionOne.module.scss';
 }
