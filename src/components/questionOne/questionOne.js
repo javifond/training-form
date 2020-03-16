@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setFever } from '../../actions/fever.actions';
 import { MIN_TEMPERATURE, MAX_TEMPERATURE } from './questionOne.constants';
@@ -35,6 +36,7 @@ class QuestionOne extends Component {
         e.preventDefault();
 
         this.props.setFever(hasFever(this.temperatureInput.current.value));
+        this.props.history.push('/question-two');
     };
 
     render() {
@@ -78,4 +80,7 @@ class QuestionOne extends Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(QuestionOne);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(withRouter(QuestionOne));

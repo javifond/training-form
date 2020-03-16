@@ -1,0 +1,53 @@
+// TODO[JB]: Find out how to add this
+// common styles to the loader.
+@import '../../styles/index.scss';
+
+// Variables
+// -------------------------------------
+$radio-label-font-size: 28px;
+$label-width: 128px;
+$duration: .3s;
+
+// Block
+// -------------------------------------
+.root {
+    composes: root from '../questionOne/questionOne.module.scss';
+}
+
+// Elements
+// -------------------------------------
+.container {
+    composes: container from '../questionOne/questionOne.module.scss';
+}
+
+.title {
+    composes: title from '../questionOne/questionOne.module.scss';
+}
+
+.radioContainer {
+    display: flex;
+    font-size: $radio-label-font-size;
+    font-weight: 700;
+    justify-content: space-around;
+    margin-bottom: var(--space-xl);
+    width: 100%;
+}
+
+.label {
+    border: 2px solid var(--primary);
+    padding: var(--space) 0;
+    text-align: center;;
+    width: $label-width;
+    transition: border-color $duration ease;
+    will-change: border-color;
+}
+
+.input:checked + .label {
+    background-color: var(--primary);
+    border-color: var(--light);
+    color: var(--light);
+}
+
+.button {
+    composes: button from '../questionOne/questionOne.module.scss';
+}
